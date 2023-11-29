@@ -12,7 +12,7 @@ docker build -t tw-bootcamp-mock-oauth2-server .
 docker-compose up
 ```
 
-The service will start in 8090 endpoint.
+The service will start in 8090 port.
 
 ## How to use
 
