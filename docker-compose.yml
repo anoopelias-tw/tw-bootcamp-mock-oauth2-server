@@ -1,0 +1,6 @@
+version: '3.7'
+services:
+  mock-oauth2-server:
+    image: tw-bootcamp-mock-oauth2-server:latest
+    ports:
+      - 8090:8090

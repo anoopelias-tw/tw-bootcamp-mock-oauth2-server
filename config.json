@@ -1,0 +1,30 @@
+{
+    "interactiveLogin": true,
+    "httpServer": "MockWebServerWrapper",
+    "tokenCallbacks": [
+        {
+            "issuerId": "default",
+            "requestMappings": [
+                {
+                    "requestParam": "scope",
+                    "match": "openid user",
+                    "claims": {
+                        "role": "user"
+                    }
+                }
+            ]
+        },
+        {
+            "issuerId": "default",
+            "requestMappings": [
+                {
+                    "requestParam": "scope",
+                    "match": "openid admin",
+                    "claims": {
+                        "role": "admin"
+                    }
+                }
+            ]
+        }
+    ]
+}
