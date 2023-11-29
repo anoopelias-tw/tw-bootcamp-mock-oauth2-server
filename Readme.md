@@ -75,4 +75,12 @@ Content-Type: application/json;charset=UTF-8
 }
 ```
 
+## How to validate tokens
 
+The JWKS is available  in the URL: http://localhost:8090/default/jwks
+
+To convert to public key, paste JWK into : https://8gwifi.org/jwkconvertfunctions.jsp
+
+To validate go to : https://gchq.github.io/CyberChef/ and use JWT Verify tool. Use `id_token` in the Input and the public key from previous step to verify.
+
+For implementation in Spring, see [this](https://docs.spring.io/spring-security/reference/reactive/oauth2/resource-server/jwt.html) example.
