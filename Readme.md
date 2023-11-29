@@ -44,7 +44,7 @@ curl --request POST \
   --header 'Authorization: Ym9va3Nob3A6c29tZVNlY3JldA==' \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --header 'origin: http://localhost:3000' \
-  --data code=vOH4XPs_8DTg38OtgUnNTDX9FGPPopObl6rZ2WjWjFo \
+  --data code=Jpob93h6_fr89y71ZvW1bM03dZn8u4qqOvPQRKO43Hc \
   --data grant_type=authorization_code \
   --data 'scope=openid user' \
   --data redirect_uri=http://localhost:3000 \
@@ -52,7 +52,7 @@ curl --request POST \
 ```
 
 Description of important fields:
- - header `Authorization`: Base64 string of `client_id:client_secret`
+ - header `Authorization`: Base64 string of `<client_id>:<client_secret>`
  - header `origin`: Will appear in CORS response header.
  - body `code`: The code in the callback URL
 
@@ -62,14 +62,14 @@ Sample response:
 HTTP/1.1 200 OK
 Access-Control-Allow-Credentials: true
 Access-Control-Allow-Origin: http://localhost:3000
-Content-Length: 1406
+Content-Length: 1550
 Content-Type: application/json;charset=UTF-8
 
 {
   "token_type" : "Bearer",
-  "id_token" : "eyJraWQiOiJkZWZhdWx0IiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJhdWQiOiJib29rc2hvcCIsIm5iZiI6MTcwMTI0MTUwNSwicm9sZSI6InVzZXIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwOTAvZGVmYXVsdCIsImV4cCI6MTcwMTI0NTEwNSwiaWF0IjoxNzAxMjQxNTA1LCJqdGkiOiI5ZWIzZWQ0OC1hYmE1LTQ3NjUtOTgxZC1lMjk0N2NjZmE4NjQifQ.lHkYSaCD9mn-U0w6zf9KfmjDi5HlQV5_FN-tLJeynEjn0CyALt-4PJfZusIhgZPGAU9v71UB5JyMNLOCfzCsqQ8aF6OUTSOI0TIRj5czJN8P2h98nVhHfNs-PkTd4c6B4NJ6b9LkD3n1mPq5qTWEMEGWRI-M7E2j_UyuZzU5ckiaImS6uiSgrnKQI-M5RGz2dPOGmB6m2nyMvLjBOABDK3VJPcu9Q0lL-IxYns5VpiGDLl5ZLQyt0TAYrDVmxUtLGl8yWi5ctyqsvFJAb_ax5MOq6ark8NYnnUKbvfB2lUoTmldw7goEXTFlQa9QNI_Olvv61QY2jIwpWHw-kUkFxQ",
-  "access_token" : "eyJraWQiOiJkZWZhdWx0IiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJuYmYiOjE3MDEyNDE1MDUsInJvbGUiOiJ1c2VyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDkwL2RlZmF1bHQiLCJleHAiOjE3MDEyNDUxMDUsImlhdCI6MTcwMTI0MTUwNSwianRpIjoiY2MwMDE3N2UtOWUyYy00NWY2LWI5OTEtN2Q3YjE3Y2E4NGNjIn0.Xc9ocLXqm1UZMNkmBkAldFxzUR__tHLIis72ry4r2d8IVPggUzd8oR5wG_cUfGhDb7dQ9ceORODvpuy0mCSV-_-YC7m5K94HuJrR45JQGk7kWqWWoA8BVeNFxxI4uXcQfH32C-UCkXeUe7-JnJeajaqRT3sPMh2Tn6JJU4XzBk6AUB4QUfdoVJMRFkA39Q-k6qGnUINkdiw2p6oIQtJwL2de7WLVBtTTRyMa9fXP8WSWYYfQxQG7uB8YOmjIAGKJNcquvytbE4LVxKn7w-murzh4fHlLOjdnnpNzlbNKQyuwOsUrlG3Ljm-Oyaf7XzW96tSUr1UfOQ0dlTn_fRWadA",
-  "refresh_token" : "6db7e327-feb1-47df-95f7-2da330126a62",
+  "id_token" : "eyJraWQiOiJkZWZhdWx0IiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJhbm9vcCIsImF1ZCI6ImJvb2tzaG9wIiwibmJmIjoxNzAxMjQ0NzQyLCJyb2xlIjoidXNlciIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA5MC9kZWZhdWx0IiwiZXhwIjoxNzAxMjQ4MzQyLCJpYXQiOjE3MDEyNDQ3NDIsIm5vbmNlIjoiNTY3OCIsImp0aSI6IjEwYjJmZTE4LWUwMjMtNDhiNS1iOWRhLTkxY2RiMDMyZWQ5NiJ9.mhpaG9HVSqg9nw4cCe1o43mkIrIhuo9adVqJ1ibyCFsTLKG4xP-6ymuXSef5Jzp44li8tIifgIZ2NPHM6qUgPNHoD1BCYIsfAaTLJYFkcKAbVJN58bwJYLk4-gn0bqVoh11R1hqb-TXUcJtNPkYMyQAFgnD_tT69MIbbJLPojahmH2hK8RHBV_gjWRVA_koI2nr_pN0474dNDDmPm9FTD_o02ONTcICUwu-eZxeInp52lAFvX3z92LG2vZG2X17cY-0Pk-xfyvvMOwZfs0FWRyNPo_SR3I6ryClu4k8qHeETz4eTnavsE0vIRoExAYC4sy0bFwZD2cXjssLP4i-G3w",
+  "access_token" : "eyJraWQiOiJkZWZhdWx0IiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJhbm9vcCIsIm5iZiI6MTcwMTI0NDc0Miwicm9sZSI6InVzZXIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwOTAvZGVmYXVsdCIsImV4cCI6MTcwMTI0ODM0MiwiaWF0IjoxNzAxMjQ0NzQyLCJub25jZSI6IjU2NzgiLCJqdGkiOiJjM2E2MjQ1MS0yM2QxLTRjNzgtODJiOC02MTllYjAxNjQ5YjMifQ.NHf95AfDLG9gRtvHjc24BZfY6WyvtIXBfetZgRlmceaXIbS3d8cIy8Oh7Z8m50ZWwO_UxmK5ODCY997qvuei29Mxr1Mcb2lC6TNIJEGPhHI0HEGzHXGxYxSOYE6PfadyvPhFHendn3TIluYaM1H4NDUdbu12cNiX--kQmRVbp8K1tQlxiplroy_Otz-jDru58pWWr0zaknNB0jsQd8gALGmYl207HArsw0GkYpSTjEyjEku08yGTxeyc44FckVh5irOQ_BDmgnpH2lnHoLFktewNM8bUWwEsjYJUZVN324_YLq7nIPR-VEhfvrGmAXjgd9Xrps2lG__lc-g_tvRUNQ",
+  "refresh_token" : "eyJhbGciOiJub25lIn0.eyJub25jZSI6IjU2NzgiLCJqdGkiOiI2NmYyMzdkYS0wNGUxLTQyZmUtYmYzMi1mMGQzZGZjZWJhY2QifQ.",
   "expires_in" : 3599,
   "scope" : "openid user"
 }
