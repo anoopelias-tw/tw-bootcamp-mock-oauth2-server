@@ -5,11 +5,11 @@
 Run the following two commmands:
 
 ```
-$ docker build -t tw-bootcamp-mock-oauth2-server .
+docker build -t tw-bootcamp-mock-oauth2-server .
 ```
 
 ```
-$ docker-compose up
+docker-compose up
 ```
 
 The service will start in 8090 endpoint.
